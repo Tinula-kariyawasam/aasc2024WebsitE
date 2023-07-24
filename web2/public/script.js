@@ -19,6 +19,7 @@ function setupEventDates() {
         new Date(2024, 8, 3) // September 3
     ];
 
+
     var eventElements = document.querySelectorAll('.event');
 
     eventElements.forEach(function(eventElement, index) {
