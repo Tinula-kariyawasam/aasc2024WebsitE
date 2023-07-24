@@ -615,3 +615,8 @@ form button {
     gap: 10px;
     /* space between the icon and the text */
 }
+
+#logo a {
+    color: var(--background);
+    text-decoration: none;
+}
