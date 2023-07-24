@@ -1,0 +1,617 @@
+:root {
+    --text: #050505;
+    --background: #fafafa;
+    --primary: #75AFED;
+    --secondary: #d6e4f5;
+    --accent: #1e79e1;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text);
+    background-color: var(--background);
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.welcome-title-line1,
+.welcome-title-line2,
+.welcome-title-line3 {
+    font-family: 'Playfair Display', serif;
+    /* Your other CSS properties here */
+}
+
+.welcome-screen {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    color: #000000;
+    padding-top: 0%;
+}
+
+.welcome-screen::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('images/newHeroImage.jpg');
+    background-size: cover;
+    background-position: right center;
+    opacity: 0.69;
+    z-index: -1;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.welcome-title-line1,
+.welcome-title-line2,
+.welcome-title-line3 {
+    text-align: center;
+    margin: 0.2px 0;
+    font-size: 4.5em;
+    /* Adjust this value to increase or decrease the space */
+    /* Adjust as needed */
+}
+
+.event-date,
+.slogan {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+.event-date {
+    font-size: 1.7em;
+    bottom: 50px;
+    /* adjust as per your design needs */
+}
+
+.slogan {
+    font-size: 1.5em;
+    bottom: 20px;
+    /* adjust as per your design needs */
+}
+
+.title-container,
+.event-date,
+.slogan {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.timeline {
+    position: absolute;
+    right: 10%;
+    /* adjust as needed */
+    top: 5%;
+    /* adjust as needed */
+    width: 2px;
+    height: 90vh;
+    /* adjust as needed */
+    background: #000;
+    display: flex;
+    /* added */
+    flex-direction: column;
+    /* added */
+    justify-content: space-between;
+    /* added */
+}
+
+.event {
+    position: relative;
+    width: 120px;
+    /* adjust as needed */
+    text-align: right;
+}
+
+.event.past {
+    text-decoration: line-through;
+}
+
+.event::before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    /* Changed */
+    top: 50%;
+    /* Updated */
+    transform: translateY(-50%);
+    /* Added to vertically center */
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #000;
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.nav-container {
+    position: sticky;
+    /* For Safari */
+    top: 0;
+    /* Add this line */
+    background-color: var(--primary);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+    align-items: center;
+    /* Add this line */
+    z-index: 1000;
+    /* Optional: This ensures the nav-container is above other content when scrolling */
+}
+
+#logo {
+    color: #fff;
+    margin: 0;
+    /* Add this line if needed */
+}
+
+.nav-container nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-container nav ul li {
+    padding: 0 20px;
+}
+
+.nav-container nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+}
+
+.dropbtn {
+    color: #fff;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    background-color: var(--accent);
+}
+
+.dropdown-content a {
+    color: rgb(251, 249, 249);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #000000
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 1.3em;
+}
+
+main {
+    flex: 1;
+    margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+    }
+    main {
+        margin-right: 0;
+    }
+    .toc {
+        position: relative;
+        max-height: none;
+        overflow-y: visible;
+    }
+    .speaker {
+        width: calc(100% / 2 - 10px);
+    }
+}
+
+.section {
+    padding: 70px;
+}
+
+.section-bg-primary {
+    background-color: var(--background);
+    color: var(--text);
+}
+
+.section-bg-secondary {
+    background-color: var(--secondary);
+    color: var(--text);
+}
+
+.section-content {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 70%;
+    /* adjust as per your needs */
+}
+
+.icon-centered {
+    display: block;
+    text-align: center;
+}
+
+.speakers-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.speaker {
+    box-sizing: border-box;
+    width: calc(100% / 3 - 10px);
+    margin-bottom: 10px;
+    background-color: var(--background);
+    padding: 10px;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.speaker img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.button {
+    display: inline-block;
+    font-weight: 400;
+    color: var(--text);
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: transparent;
+    border: 5px solid var(--accent);
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .95rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.button:hover {
+    color: var(--background);
+    background-color: var(--accent);
+    border-color: var(--accent);
+}
+
+.points {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 2em;
+}
+
+.point {
+    flex: 1;
+    margin: 1em;
+}
+
+.sponsor-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.sponsor-image {
+    width: 200px;
+    /* adjust as needed */
+    height: 100px;
+    /* adjust as needed */
+    object-fit: contain;
+}
+
+footer {
+    background-color: var(--primary);
+    color: var(--background);
+    /* You might need to adjust text color so it contrasts well with the background */
+    padding: 40px;
+    /* Add some padding to give the text inside some space */
+    text-align: center;
+    /* Center the text */
+}
+
+.section-conference {
+    margin: 50px auto 0 auto;
+    text-align: left;
+    max-width: 50%;
+    /* adjust as per your needs */
+}
+
+.centered {
+    text-align: center;
+}
+
+.table-container {
+    display: flex;
+    justify-content: space-between;
+    /* provides more space between each table */
+    align-items: start;
+    /* vertically aligns the tops of the tables */
+    margin: 50px auto 0 auto;
+    text-align: left;
+    flex-wrap: wrap;
+    /* allows tables to wrap onto the next line on smaller screens */
+}
+
+.table-container table {
+    margin: 40 100px;
+    /* provides space around each table */
+}
+
+.table-container th,
+.table-container td {
+    padding: 20px;
+    /* gives more horizontal space in each cell */
+}
+
+.table-container .tg {
+    width: 100%;
+}
+
+.room-image {
+    width: 300px;
+    height: 200px;
+}
+
+.image-container {
+    display: flex;
+    width: 100%;
+    height: 300px;
+    /* Increase this value to adjust the height of the image container */
+    margin-bottom: 20px;
+}
+
+.image-container img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-large {
+    width: 50%;
+}
+
+.img-small-container {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.img-small {
+    width: 100%;
+    height: 50%;
+}
+
+.img-xsmall {
+    width: 30%;
+}
+
+form {
+    margin: 0 auto;
+    width: 50%;
+}
+
+form label {
+    display: block;
+    margin-top: 20px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+    /* Adjust as needed */
+}
+
+form button {
+    margin-top: 30px;
+    margin-right: 20px;
+    padding: 10px 20px;
+}
+
+.site-footer {
+    margin-top: 50px;
+    /* adjust the value as per your needs */
+}
+
+.schedule-table {
+    border: 1px solid #000;
+    margin-bottom: 20px;
+}
+
+.schedule-header {
+    background-color: #1e79e1;
+    /* Adjust color as needed */
+    padding: 10px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.schedule-item {
+    border-top: 1px solid #000;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 1s ease;
+}
+
+.schedule-item:hover {
+    background-color: #f8f9fa;
+}
+
+.schedule-item-title {
+    font-size: 18px;
+}
+
+.schedule-item-time {
+    font-size: 16px;
+}
+
+#detail-popup {
+    position: fixed;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #000;
+    width: 500px;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+}
+
+.vertical-space {
+    height: 50px;
+}
+
+.speaker-headshot {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    /* This will ensure the image covers the full circle even if it's not square */
+}
+
+.speaker-container {
+    display: flex;
+    flex-direction: column;
+    /* This will make the content (image, name, association, and description) align vertically */
+    align-items: center;
+    /* This will center the content */
+    width: 100%;
+    /* This will ensure the container spans the entire width */
+}
+
+.speaker-name,
+.speaker-association {
+    margin-top: 0px;
+    /* Add some space between the image and the text */
+}
+
+.accordion {
+    width: 100%;
+}
+
+.accordion-container {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.accordion-button {
+    background-color: #f1f1f1;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.accordion-content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+}
+
+.accordion-content p {
+    padding: 15px 0;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    /* space between items */
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form form .form-group {
+    width: 300px;
+    /* adjust width as needed */
+}
+
+.contact-form h3 {
+    display: flex;
+    align-items: center;
+    /* vertically aligns the text with the icon */
+    gap: 10px;
+    /* space between the icon and the text */
+}

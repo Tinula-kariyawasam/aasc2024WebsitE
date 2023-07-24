@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AASC2024</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+</head>
+
+<body>
+    <div class="welcome-screen">
+        <div class="title-container">
+            <h1 class="welcome-title-line1">Australasian</h1>
+            <h1 class="welcome-title-line2">Applied Statistics</h1>
+            <h1 class="welcome-title-line3">Conference 2024</h1>
+        </div>
+        <p class="event-date">3-5 September</p>
+        <p class="slogan">Rottnest Island, Western Australia</p>
+    </div>
+    <div class="timeline">
+        <div class="event">
+            <div class="date">20 Jul 2023</div>
+            <div class="desc">Website up</div>
+        </div>
+        <div class="event">
+            <div class="date">1 Nov 2023</div>
+            <div class="desc">Website public</div>
+        </div>
+        <div class="event">
+            <div class="date">5 Feb 2024</div>
+            <div class="desc">Registration & abstract submissions open</div>
+        </div>
+        <div class="event">
+            <div class="date">20 Jun 2024</div>
+            <div class="desc">Notification of acceptance</div>
+        </div>
+        <div class="event">
+            <div class="date">1 Jul 2024</div>
+            <div class="desc">Early bird registration closes</div>
+        </div>
+        <div class="event">
+            <div class="date">8 Jul 2024</div>
+            <div class="desc">Registration deadline for presenters</div>
+        </div>
+        <div class="event">
+            <div class="date">29 Jul 2024</div>
+            <div class="desc">Registration closes</div>
+        </div>
+        <div class="event">
+            <div class="date">2 Sep 2024</div>
+            <div class="desc">Workshops</div>
+        </div>
+        <div class="event">
+            <div class="date">3 Sep 2024</div>
+            <div class="desc">Conference begins</div>
+        </div>
+    </div>
+    <div class="scroll-down">
+        <i class="fa-solid fa-arrow-down fa-bounce fa-lg" onclick="scrollToContent()"></i>
+    </div>
+
+    <!-- The rest of your page content goes here -->
+    <header>
+        <div class="nav-container" id="nav-container">
+            <h1 id="logo">AASC 2024</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <!-- Other tabs will go here, but they won't be linked yet. -->
+                    <li class="dropdown">
+                        <span class="dropbtn">Registration</span>
+                        <div class="dropdown-content">
+                            <a href="conference.html">Conference</a>
+                            <a href="accommadation.html">Accommodation</a>
+                            <a href="payement.html">Payment</a>
+                        </div>
+                    </li>
+                    <li><a href="programme.html">Programme</a></li>
+                    <li><a href="abstracts.html">Abstracts</a></li>
+                    <li><a href="workshops.html">Workshops</a></li>
+                    <li><a href="invited.html">Invited</a></li>
+                    <li><a href="information.html">Information</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section section-bg-primary">
+        <div class="section-content">
+            <i class="fas fa-users fa-lg icon-centered"></i>
+            <h2>Unmissable conference focusing on the latest development of applied statistics.</h2>
+            <p>Imagine immersing yourself in the fascinating world of statistics and data science while surrounded by azure blue waters, unspoiled sandy beaches, and a vibrant array of local wildlife. Rottnest Island, fondly known as 'Rotto' by locals, provides
+                the perfect serene backdrop for deep intellectual engagement and promises an unforgettable experience filled with exploration, adventure, and relaxation.</p>
+            <p>Whether you're a seasoned professional, an eager academic, or a bright-eyed student keenly exploring the vast and complex world of statistics, this conference is for you! We passionately welcome anyone studying or working in statistics, data
+                science, and related fields to join us for an enlightening journey into how statistical methodologies can be leveraged across various disciplines. Age is no barrier to us; all you need to bring along is a thirst for knowledge, a spirit
+                of discovery, and a readiness to engage with like-minded individuals from around the globe.</p>
+            <p>We are excited to facilitate sharing ideas, inspiring innovation, and fostering meaningful connections. Let's dive into the engaging universe of statistics together at AASC 2024. We can't wait to see you at Rottnest Island!</p>
+        </div>
+    </section>
+
+    <section class="section section-bg-secondary">
+        <div class="section-content">
+            <i class="fas fa-microphone-alt fa-lg icon-centered"></i>
+            <h2>Meet our speakers</h2>
+            <div class="speakers-grid">
+                <div class="speaker">
+                    <img src="images/AdrianBraddeley.png" alt="Adrian Baddeley">
+                    <h3>Adrian Baddeley</h3>
+                    <p>Leading Australian statistician innovating spatial data methods and open-source software.</p>
+                </div>
+                <div class="speaker">
+                    <img src="images/Hans-Peter-Piepho.jpg" alt="Hans-Peter Piepho">
+                    <h3>Hans-Peter Piepho</h3>
+                    <p>Specializes in statistical procedures for plant genetics, breeding, and trials</p>
+                </div>
+                <div class="speaker">
+                    <img src="images/AH.jpeg" alt="Anna Hayes">
+                    <h3>Anna Hayes</h3>
+                    <p>An experienced leader in statistical consulting, delivering high-quality solutions across various industries.</p>
+                </div>
+                <div class="speaker">
+                    <img src="images/RogerPayne.jpeg" alt="Roger Payne">
+                    <h3>Roger Payne</h3>
+                    <p>Former Chief Officer at VSN, led Genstat's development, now part-time secretary.</p>
+                </div>
+                <div class="speaker">
+                    <img src="images/kerrie2.jpeg" alt="Kerrie Mengersen">
+                    <h3>Kerrie Mengersen</h3>
+                    <p>Develops statistical methods for complex problems in environment, health, and genetics. </p>
+                </div>
+                <div class="speaker">
+                    <img src="images/question-mark-icon-free-vector.jpg" alt="Speaker 6">
+                    <h3>Speaker 6</h3>
+                    <p>Lorem ipsum dolor sit amet...</p>
+                </div>
+            </div>
+            <a class="button" href="invited.html">Check them out!</a>
+        </div>
+    </section>
+
+    <section class="section section-bg-primary">
+        <div class="section-content">
+            <h2>Why attend</h2>
+            <div class="points">
+                <div class="point">
+                    <i class="fa-solid fa-chart-line fa-2xl" style="color: #050505;"></i>
+                    <h3>Ahead of the curve</h3>
+                    <p>Engage with groundbreaking ideas, learn innovative statistical methods, and explore the latest industry trends. Discover cutting-edge methodologies, explore Bayesian statistics and unlock Machine Learning's potential at this forward-thinking
+                        applied statistics conference.</p>
+                </div>
+                <div class="point">
+                    <i class="fa-solid fa-people-arrows fa-2xl" style="color: #050505;"></i>
+                    <h3>Network</h3>
+                    <p>Harness the opportunity to network with fellow statisticians at our conference. Establish meaningful relationships, share challenges and gain fresh perspectives from your field. Foster connections to bolster your statistical journey.</p>
+                </div>
+                <div class="point">
+                    <i class="fa-solid fa-umbrella-beach fa-2xl" style="color: #050505;"></i>
+                    <h3>Serene location</h3>
+                    <p>Unwind at Rottnest Island, our conference location. Its pristine beaches offer a serene backdrop for relaxation. Recharge amid natural beauty while delving into the world of statistics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-bg-secondary">
+        <div class="section-content">
+            <h2>Our sponsors</h2>
+            <div class="sponsor-container">
+                <a href="https://vsni.co.uk/" target="_blank">
+                    <img class="sponsor-image" src="images/VSNi_logo_BW_hires.png" alt="Sponsor Image">
+                </a>
+                <a href="https://www.businesseventsperth.com/" target="_blank">
+                    <img class="sponsor-image" src="images/BEP logo master RGB.png" alt="Second Sponsor Image">
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section section-bg-primary">
+        <div class="section-content">
+            <h2>Acknowledgement</h2>
+            <p>The AASC2024 Organising Committee acknowledges the Traditional Owners of country throughout Australia and New Zealand, and recognises their continuing connection to land, waters and community. We pay our respects to them and their cultures;
+                and to elders both past and present.</p>
+        </div>
+    </section>
+
+
+
+    <footer class="site-footer">
+        <p>&copy; 2023 AASC. All rights reserved.</p>
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Australasian Applied Statistics Conference 2024</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+</head>
+
+<body>
+    <header>
+        <div class="nav-container" id="nav-container">
+            <h1 id="logo">AASC 2024</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <!-- Other tabs will go here, but they won't be linked yet. -->
+                    <li class="dropdown">
+                        <span class="dropbtn">Registration</span>
+                        <div class="dropdown-content">
+                            <a href="conference.html">Conference</a>
+                            <a href="accommadation.html">Accommodation</a>
+                            <a href="payement.html">Payment</a>
+                        </div>
+                    </li>
+                    <li><a href="programme.html">Programme</a></li>
+                    <li><a href="abstracts.html">Abstracts</a></li>
+                    <li><a href="workshops.html">Workshops</a></li>
+                    <li><a href="invited.html">Invited</a></li>
+                    <li><a href="information.html">Information</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="section-conference">
+        <h2 class="left">AASC 2024 Schedule</h2>
+        <div class="schedule-table" id="monday-table">
+            <div class="schedule-header">Monday 5th September</div>
+            <div class="schedule-item" id="data-innovation-workshop" onclick="displayDetails(this.id)">
+                <div class="schedule-item-title">Data Innovation Workshop</div>
+                <div class="schedule-item-time">09:30 - 13:00</div>
+            </div>
+        </div>
+        <!-- The detail popup -->
+        <div class="vertical-space"></div>
+
+        <!-- Schedule for 6th September -->
+        <div class="schedule-table" id="tuesday-table">
+            <div class="schedule-header">Tuesday 6th September</div>
+            <div class="schedule-item" id="data-innovation-workshop" onclick="displayDetails(this.id)">
+                <div class="schedule-item-title">Data Innovation Workshop</div>
+                <div class="schedule-item-time">09:30 - 13:00</div>
+            </div>
+        </div>
+
+        <!-- Add some vertical space -->
+        <div class="vertical-space"></div>
+
+        <!-- Schedule for 7th September -->
+        <div class="schedule-table" id="wednesday-table">
+            <div class="schedule-header">Wednesday 7th September</div>
+            <div class="schedule-item" id="data-innovation-workshop" onclick="displayDetails(this.id)">
+                <div class="schedule-item-title">Data Innovation Workshop</div>
+                <div class="schedule-item-time">09:30 - 13:00</div>
+            </div>
+        </div>
+
+        <!-- The detail popup -->
+        <div id="detail-popup" style="display:none;">
+            <!-- Details will be inserted here by JavaScript -->
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <p>&copy; 2023 AASC. All rights reserved.</p>
+    </footer>
+
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
