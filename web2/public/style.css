@@ -10,6 +10,7 @@
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -250,14 +251,17 @@ main {
         flex-direction: column;
         width: 100%;
     }
+
     main {
         margin-right: 0;
     }
+
     .toc {
         position: relative;
         max-height: none;
         overflow-y: visible;
     }
+
     .speaker {
         width: calc(100% / 2 - 10px);
     }
@@ -319,7 +323,7 @@ main {
     vertical-align: middle;
     cursor: pointer;
     background-color: transparent;
-    border: 5px solid var(--accent);
+    border: 5px solid var(--text);
     padding: .5rem 1rem;
     font-size: 1rem;
     line-height: 1.5;
@@ -619,4 +623,17 @@ form button {
 #logo a {
     color: var(--background);
     text-decoration: none;
+}
+
+.section-conference li {
+    margin-bottom: 10px;
+    /* Adjust this value according to your preference */
+}
+
+.underlined-title {
+    border-bottom: 2px solid black;
+    /* Change 'black' to any color you want for the underline */
+    display: inline-block;
+    padding-bottom: 5px;
+    /* Adjusts the spacing between the title and the underline */
 }

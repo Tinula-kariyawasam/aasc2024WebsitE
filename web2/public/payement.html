@@ -10,70 +10,79 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <script src="script.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <script src="https://www.google.com/recaptcha/api.js?render=6LeqrlEoAAAAAETyXI8rhZnGvWvl0BtFVdSkXLk5" async
+        defer></script>
 </head>
 
-<header>
-    <div class="nav-container" id="nav-container">
-        <h1 id="logo"><a href="index.html">AASC 2024</a></h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <!-- Other tabs will go here, but they won't be linked yet. -->
-                <li class="dropdown">
-                    <span class="dropbtn">Registration</span>
-                    <div class="dropdown-content">
-                        <a href="conference.html">Conference</a>
-                        <a href="accommadation.html">Accommodation</a>
-                        <a href="payement.html">Payment</a>
-                    </div>
-                </li>
-                <li><a href="programme.html">Programme</a></li>
-                <li><a href="abstracts.html">Abstracts</a></li>
-                <li><a href="workshops.html">Workshops</a></li>
-                <li><a href="invited.html">Invited</a></li>
-                <li><a href="information.html">Information</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+<body>
+
+    <header>
+        <div class="nav-container" id="nav-container">
+            <h1 id="logo"><a href="index.html">AASC 2024</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <!-- Other tabs will go here, but they won't be linked yet. -->
+                    <li class="dropdown">
+                        <span class="dropbtn">Registration</span>
+                        <div class="dropdown-content">
+                            <a href="conference.html">Conference</a>
+                            <a href="accommadation.html">Accommodation</a>
+                            <a href="payement.html">Payment</a>
+                        </div>
+                    </li>
+                    <li><a href="programme.html">Programme</a></li>
+                    <li><a href="abstracts.html">Abstracts</a></li>
+                    <li><a href="workshops.html">Workshops</a></li>
+                    <li><a href="invited.html">Invited</a></li>
+                    <li><a href="information.html">Information</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="section-conference">
+        <h2 class="centered">Registrant Information</h2>
+        <form action="next-page-conference.html" method="get">
+            <label for="email">*Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            <label for="fname">*First name:</label><br>
+            <input type="text" id="fname" name="fname" required><br>
+            <label for="lname">*Last name:</label><br>
+            <input type="text" id="lname" name="lname" required><br>
+            <label for="phone">Phone:</label><br>
+            <input type="tel" id="phone" name="phone"><br>
+            <label for="diet">Dietary Requirement:</label><br>
+            <input type="text" id="diet" name="diet"><br>
+            <label for="first-time">*First time at conference:</label><br>
+            <label><input type="radio" id="yes" name="first-time" value="yes" required>Yes</label>
+            <label><input type="radio" id="no" name="first-time" value="no" required>No</label><br>
+            <label for="member">*Would you like to become a member of AGUI:</label><br>
+            <label><input type="radio" id="yes" name="member" value="yes" required>Yes</label>
+            <label><input type="radio" id="no" name="member" value="no" required>No</label><br>
+            <label for="booklet">*Would you like a hard copy of the conference book for $20?:</label><br>
+            <em>A pdf copy of the booklet will be available to all free of charge.</em><br>
+            <label><input type="radio" id="yes" name="booklet" value="yes" required>Yes</label>
+            <label><input type="radio" id="no" name="booklet" value="no" required>No</label><br>
+            <label for="location">*Where do you live (state/country):</label><br>
+            <input type="text" id="location" name="location" required><br>
+            <label for="study-work">*Where do you currently study/work (Organisation name):</label><br>
+            <input type="text" id="study-work" name="study-work" required><br>
+            <label for="hear-about">How did you hear about the conference</label><br>
+            <input type="text" id="hear-about" name="hear-about"><br>
+            <label for="access-needs">Accessibility needs (e.g. hearing, vision, mobility)</label><br>
+            <input type="text" id="access-needs" name="access-needs"><br>
+            <a href="index.html"><button type="button">Cancel</button></a>
+            <a href="conference.html"><button type="button">Back</button></a>
+            <button type="submit">Next</button>
+        </form>
     </div>
-</header>
-
-<div class="section-conference">
-    <h2 class="centered">Registrant Information</h2>
-    <form action="/submit" method="post">
-        <label for="email">*Email:</label><br>
-        <input type="email" id="email" name="email" required><br>
-        <label for="fname">*First name:</label><br>
-        <input type="text" id="fname" name="fname" required><br>
-        <label for="lname">*Last name:</label><br>
-        <input type="text" id="lname" name="lname" required><br>
-        <label for="phone">Phone:</label><br>
-        <input type="tel" id="phone" name="phone"><br>
-        <label for="diet">*Dietary Requirement:</label><br>
-        <input type="text" id="diet" name="diet" required><br>
-        <label for="first-time">*First time at conference:</label><br>
-        <label><input type="radio" id="yes" name="first-time" value="yes" required>Yes</label>
-        <label><input type="radio" id="no" name="first-time" value="no" required>No</label><br>
-        <label for="location">*Where do you live (state/country):</label><br>
-        <input type="text" id="location" name="location" required><br>
-        <label for="study-work">Where do you currently study/work:</label><br>
-        <input type="text" id="study-work" name="study-work"><br>
-        <label for="hear-about">How did you hear about the conference</label><br>
-        <input type="text" id="hear-about" name="hear-about"><br>
-        <label for="access-needs">Accessibility needs (e.g. hearing, vision, mobility)</label><br>
-        <input type="text" id="access-needs" name="access-needs"><br>
-        <!-- Insert reCAPTCHA here -->
-        <a href="index.html"><button type="button">Cancel</button></a>
-        <a href="conference.html"><button type="button">Back</button></a>
-        <a href="next-page-conference.html"><button type="button">Next</button></a>
-    </form>
-</div>
 
 
-<footer class="site-footer">
-    <p>&copy; 2023 AASC. All rights reserved.</p>
-</footer>
-
+    <footer class="site-footer">
+        <p>&copy; 2024 AASC. All rights reserved.</p>
+    </footer>
 
 </body>
 

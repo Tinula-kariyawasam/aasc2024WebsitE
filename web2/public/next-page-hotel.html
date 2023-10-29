@@ -40,19 +40,21 @@
 
 <div class="section-conference">
     <h2 class="centered">Choose samphire room type.</h2>
-    <form action="/submit" method="post" id="room-form">
-        <label><input type="radio" id="-roomchoice1" name="room" value="roomchoice1" required>Beach Lane King</label><br>
-        <label><input type="radio" id="roomchoice2" name="room" value="roomchoice2" required>Poolside King Suite</label><br>
+    <form action="payUser.html" method="get">
+        <label><input type="radio" id="-roomchoice1" name="room" value="roomchoice1" required>Beach Lane King
+            [$750]</label><br>
+        <label><input type="radio" id="roomchoice2" name="room" value="roomchoice2" required>Poolside King Suite
+            [$975]</label><br>
 
         <a href="index.html"><button type="button">Cancel</button></a>
         <a href="conference.html"><button type="button">Back</button></a>
-        <a href="payUser.html" id="next-button"><button type="button">Next</button></a>
+        <button type="submit">Next</button>
         <p id="error-message" style="color:red;"></p>
     </form>
 </div>
 
 <footer class="site-footer">
-    <p>&copy; 2023 AASC. All rights reserved.</p>
+    <p>&copy; 2024 AASC. All rights reserved.</p>
 </footer>
 
 

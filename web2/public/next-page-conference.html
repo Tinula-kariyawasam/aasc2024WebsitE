@@ -40,23 +40,32 @@
 
 <div class="section-conference">
     <h2 class="centered">Choose conference type.</h2>
-    <form action="/submit" method="post" id="conference-form">
-        <label><input type="radio" id="choice1" name="conference" value="choice1" required>Full 3 day conference + workshop</label><br>
-        <label><input type="radio" id="choice2" name="conference" value="choice2" required>Full 3 day conference + workshop student</label><br>
-        <label><input type="radio" id="choice3" name="conference" value="choice3" required>Only workshop</label><br>
-        <label><input type="radio" id="choice4" name="conference" value="choice4" required>Only workshop student</label><br>
-        <label><input type="radio" id="choice5" name="conference" value="choice5" required>Single day</label><br>
-        <label><input type="radio" id="choice6" name="conference" value="choice6" required>Single day student</label><br>
+    <form action="next-page-hotel.html" method="get">
+        <label><input type="radio" id="choice1" name="conference" value="choice1" required>Full 3 day conference +
+            workshop [$1,150]</label><br>
+        <label><input type="radio" id="choice2" name="conference" value="choice2" required>Full 3 day conference +
+            workshop student [$750]</label><br>
+        <label><input type="radio" id="choice3" name="conference" value="choice3" required>Full 3 day conference
+            [$1,050]</label><br>
+        <label><input type="radio" id="choice4" name="conference" value="choice4" required>Full 3 day conference +
+            workshop student [$650]</label><br>
+        <label><input type="radio" id="choice5" name="conference" value="choice5" required>Only workshop
+            [$200]</label><br>
+        <label><input type="radio" id="choice6" name="conference" value="choice6" required>Only workshop student
+            [$100]</label><br>
+        <label><input type="radio" id="choice7" name="conference" value="choice7" required>Single day [$400]</label><br>
+        <label><input type="radio" id="choice8" name="conference" value="choice8" required>Single day student
+            [$250]</label><br>
 
         <a href="index.html"><button type="button">Cancel</button></a>
         <a href="conference.html"><button type="button">Back</button></a>
-        <a href="next-page-hotel.html" id="next-button"><button type="button">Next</button></a>
+        <button type="submit">Next</button>
         <p id="error-message" style="color:red;"></p>
     </form>
 </div>
 
 <footer class="site-footer">
-    <p>&copy; 2023 AASC. All rights reserved.</p>
+    <p>&copy; 2024 AASC. All rights reserved.</p>
 </footer>
 
 

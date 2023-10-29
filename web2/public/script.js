@@ -120,9 +120,41 @@ window.onload = function() {
     }
 }
 
-
 function scrollToContent() {
     document.querySelector('header').scrollIntoView({
         behavior: 'smooth'
     });
 }
+
+// reCAPTCHA 
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+});
+
+document.getElementById('registrationForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    grecaptcha.execute('6LeqrlEoAAAAAETyXI8rhZnGvWvl0BtFVdSkXLk5', { action: 'submit' }).then(async function(token) {
+        const formData = new FormData(e.target);
+        formData.append('g-recaptcha-response', token);
+
+        // Check reCAPTCHA response
+        const verification = await fetch('/verify-recaptcha', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ 'g-recaptcha-response': token })
+        });
+
+        const result = await verification.json();
+
+        if (result.success) {
+            // Now submit the form data to your server or handle as necessary
+            // You can use fetch to POST the formData to your server endpoint that handles the form submission
+        } else {
+            // Handle reCAPTCHA failure
+            alert(result.error || 'Submission failed. Please try again.');
+        }
+    });
+});
