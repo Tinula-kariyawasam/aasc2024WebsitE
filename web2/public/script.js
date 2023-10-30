@@ -22,7 +22,7 @@ function setupEventDates() {
 
     var eventElements = document.querySelectorAll('.event');
 
-    eventElements.forEach(function(eventElement, index) {
+    eventElements.forEach(function (eventElement, index) {
         if (events[index] < today) {
             eventElement.classList.add('past');
         }
@@ -51,7 +51,7 @@ function setupNextButton() {
         return false;
     }
 
-    nextButton.addEventListener('click', function(e) {
+    nextButton.addEventListener('click', function (e) {
         if (!checkRadioSelected()) {
             e.preventDefault();
             errorMessage.innerText = "Please select a conference option to move forward.";
@@ -63,15 +63,71 @@ function setupNextButton() {
 }
 
 let scheduleData = {
-    "data-innovation-workshop": {
-        "title": "Data Innovation Workshop",
-        "description": "Kicking off London Data Week, this event will convene data leaders, practitioners, and enthusiasts from across the city for a daylong event highlighting London’s unique flavor of data innovation and looking forward to how data & technology can support creating a better London of tomorrow. Limited tickets are available - please fill out the following form to express your interest in attending the event.",
-        "organizer": "London Office of Technology and Innovation (LOTI)",
-        "type": "Public Conversations",
-        "location": "Museum of London",
-        "date": "Monday 3 July 2023",
+    "workshop": {
+        "title": "Workshops at Fremantle",
+        "description": "To be given by by Prof. Hans-Peter Piepho and Dr Roger Payne. More information shall be provided later.",
+        "organizer": "AASC + VSNI",
+        "type": "Interactive + Learning",
+        "location": "Esplanade Hotel Fremantle",
+        "date": "Monday 3 July 2024",
         "time": "09:30 - 16:00"
     },
+    "monday-arvo": {
+        "title": "Travel to Rottnest",
+        "description": "Meeting at Fremantle (B Shed) 14:00 to depart to Rottnest Island",
+        "organizer": "AASC + Rottnest Express",
+        "location": "Rottnest Express B Shed Terminal",
+        "date": "Monday 3 July 2024",
+        "time": "14:00 - 15:00"
+    },
+    "monday-dinner": {
+        "title": "Welcome Dinner",
+        "description": "Be prepared to be wine and dined with Rottnest Island all to yourselves",
+        "organizer": "AASC",
+        "location": "Samphire",
+        "date": "Monday 3 July 2024",
+        "time": "18:00"
+    },
+    "tuesday": {
+        "title": "Full day of conference + networking",
+        "description": "More information will be revealed later.",
+        "organizer": "AASC",
+        "location": "Samphire",
+        "date": "Tuesday 4 July 2024",
+        "time": "09:00 - 16:00"
+    },
+    "wed-morn": {
+        "title": "Half day of conference + networking",
+        "description": "More information will be revealed later.",
+        "organizer": "AASC",
+        "location": "Samphire",
+        "date": "Wednesday 5 July 2024",
+        "time": "09:00 - 13:00"
+    },
+    "wed-arvo": {
+        "title": "Free Time",
+        "description": "AASC will provide a list of organised social activities or feel free to roam around the island. Make sure to take plenty of selfies with quokkas.",
+        "organizer": "AASC",
+        "location": "Rottnest Island",
+        "date": "Wednesday 5 July 2024",
+        "time": "14:00 - Night"
+    },
+    "thursday": {
+        "title": "Full day of conference + networking",
+        "description": "More information will be revealed later.",
+        "organizer": "AASC",
+        "location": "Samphire",
+        "date": "Thursday 6 July 2024",
+        "time": "09:00 - 14:00"
+    },
+    "thursday-bye": {
+        "title": "A Sad Goodbye",
+        "description": "Commencement of conference will occur at afternoon tea.",
+        "organizer": "AASC",
+        "location": "Samphire",
+        "date": "Thursday 6 July 2024",
+        "time": "14:00"
+    }
     // Add additional schedule items here...
 };
 
@@ -83,7 +139,6 @@ function displayDetails(id) {
             <h2>${data.title}</h2>
             <p>${data.description}</p>
             <p><strong>Organiser:</strong> ${data.organizer}</p>
-            <p><strong>Type:</strong> ${data.type}</p>
             <p><strong>Location:</strong> ${data.location}</p>
             <p><strong>Date:</strong> ${data.date}</p>
             <p><strong>Time:</strong> ${data.time}</p>
@@ -103,10 +158,10 @@ function closeDetails() {
     popup.style.display = 'none';
 }
 
-window.onload = function() {
+window.onload = function () {
     var acc = document.getElementsByClassName("accordion-button");
     for (var i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function() {
+        acc[i].addEventListener("click", function () {
             this.classList.toggle("active");
             var content = this.nextElementSibling;
             if (content.style.maxHeight) {
@@ -131,10 +186,10 @@ app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
 
-document.getElementById('registrationForm').addEventListener('submit', async function(e) {
+document.getElementById('registrationForm').addEventListener('submit', async function (e) {
     e.preventDefault();
 
-    grecaptcha.execute('6LeqrlEoAAAAAETyXI8rhZnGvWvl0BtFVdSkXLk5', { action: 'submit' }).then(async function(token) {
+    grecaptcha.execute('6LeqrlEoAAAAAETyXI8rhZnGvWvl0BtFVdSkXLk5', { action: 'submit' }).then(async function (token) {
         const formData = new FormData(e.target);
         formData.append('g-recaptcha-response', token);
 
