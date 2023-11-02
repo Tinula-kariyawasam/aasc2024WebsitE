@@ -78,7 +78,7 @@ let scheduleData = {
         "organizer": "AASC + Rottnest Express",
         "location": "Rottnest Express B Shed Terminal",
         "date": "Monday 3 July 2024",
-        "time": "14:00 - 15:00"
+        "time": "15:00 - 16:00"
     },
     "monday-dinner": {
         "title": "Welcome Dinner",
@@ -94,7 +94,7 @@ let scheduleData = {
         "organizer": "AASC",
         "location": "Samphire",
         "date": "Tuesday 4 July 2024",
-        "time": "09:00 - 16:00"
+        "time": "09:00 - 17:00"
     },
     "wed-morn": {
         "title": "Half day of conference + networking",
