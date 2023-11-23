@@ -6,9 +6,9 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://js.stripe.com/v3/"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Ubuntu&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <script src="script.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <script src="https://www.google.com/recaptcha/api.js?render=6LeqrlEoAAAAAETyXI8rhZnGvWvl0BtFVdSkXLk5" async
         defer></script>
@@ -32,7 +32,7 @@
                         </div>
                     </li>
                     <li><a href="programme.html">Programme</a></li>
-                    <li><a href="abstracts.html">Abstracts</a></li>
+                    <!-- <li><a href="abstracts.html">Abstracts</a></li> -->
                     <li><a href="workshops.html">Workshops</a></li>
                     <li><a href="invited.html">Invited</a></li>
                     <li><a href="information.html">Information</a></li>
@@ -44,7 +44,8 @@
 
     <div class="section-conference">
         <h2 class="centered">Registrant Information</h2>
-        <form action="next-page-conference.html" method="get">
+        <!-- <form id="registrationForm" action="next-page-conference.html" method="get"> -->
+        <form id="registrationForm" method="get">
             <label for="email">*Email:</label><br>
             <input type="email" id="email" name="email" required><br>
             <label for="fname">*First name:</label><br>
@@ -83,6 +84,8 @@
     <footer class="site-footer">
         <p>&copy; 2024 AASC. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 
