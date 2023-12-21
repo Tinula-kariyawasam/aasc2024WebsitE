@@ -291,6 +291,10 @@ main {
     padding: 70px;
 }
 
+.section-workshop {
+    padding: 20px;
+}
+
 .section-bg-primary {
     background-color: var(--background);
     color: var(--text);
@@ -663,6 +667,11 @@ form button {
     display: inline-block;
     padding-bottom: 5px;
     /* Adjusts the spacing between the title and the underline */
+    margin-bottom: 0; /* Removes the default bottom margin */
 }
-
+.authorship {
+    font-size: 1em; /* Adjust to match your design */
+    color: #666; /* A lighter shade of black for the author text */
+    margin-bottom: 50px; /* Adjusts the spacing between the title underline and the author text */
+}
 /* For mobile and smaller screens */
